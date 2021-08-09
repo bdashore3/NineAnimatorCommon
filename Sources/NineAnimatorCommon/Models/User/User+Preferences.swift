@@ -187,7 +187,7 @@ public extension NineAnimatorUser {
     
     /// Allow experimental sources to be enabled
     var enableExperimentalSources: Bool {
-        get { _freezer.typedValue(forKey: Keys.sourceExplicitEnabled, default: false) }
+        get { _freezer.typedValue(forKey: Keys.sourceExplicitEnabled, default: true) }
         set { _freezer.set(newValue, forKey: Keys.sourceExplicitEnabled) }
     }
     
@@ -217,7 +217,7 @@ public extension NineAnimatorUser {
     
     /// Discovered app icons
     var discoveredAppIcons: [String] {
-        get { _freezer.typedValue(forKey: Keys.discoveredAppIcons, default: [String]()) }
+        get { _freezer.typedValue(forKey: Keys.discoveredAppIcons, default: [String](["Fox", "Bald Man"])) }
         set { _freezer.set(newValue, forKey: Keys.discoveredAppIcons) }
     }
     
